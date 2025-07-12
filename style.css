@@ -1,95 +1,75 @@
-*,*::before,*::after{
+
+* {
+    padding: 0%;
+    margin: 0%;
     box-sizing: border-box;
     font-family:Gotham Rounded;
 }
-:root{
-    --hue-neutral: 200;
-    --hue-wrong:0;
-    --hue-correct:145;
-}
-
 body{
-    padding: 0%;
-    margin: 0%;
-    display: flex;
-    width:100vw;
-    height:50vw;
-    justify-content: center;
-    align-items: center;
     background-color:#86beeb;
 }
 
-
-.size{
-    justify-content: center;
-    align-items: center;
+.app{
+    background: #fff;
+    width: 90%;
+    max-width:600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
 }
-body.correct{
-    --hue: var(--hue-correct);
+.app h1{
+    font-weight:25px;
+    color:rgb(54, 54, 226);
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
 }
-
-body.wrong{
-    --hue: var(--hue-wrong);
+.quiz{
+  padding: 20px 0;;
 }
-
-.container{
-    width: 800px;
-    max-width:80%;
-    background-color: white;
-    border: radius 5px;
-    padding: 10px;
-    box-shadow:0 0 10px 2px ;
+.quiz h2{
+    font-size: 18px;
+    color: #222;
+    font-weight: 600;
 }
-
-.btn-grid{
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-    gap: 10px;
-    margin: 20px 0;
-}
-
 .btn{
-     --hue: var(--hue-neutral);
-     border:1px solid hsl(var(--hue), 100%, 30%) ;
-     background-color: hsl(var(--hue), 100%, 50%);
-     border-radius: 5px;
-     padding:5px 10px;
-     color:white;
-     outline:none;
+    background: #fff;
+    color: #222;
+    font-weight:500;
+    width:100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin:10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
 .btn:hover{
-    border-color: rgba(0, 0, 0, 0.822);
-    border-width: 2PX;
-    color: #000;
-  
-    
+    background: #222;
+    color: #fff;
 }
 
-.btn.correct{
-    background-color:rgb(21, 176, 21);
-    color:black;
+
+ #next-btn{
+    background:#001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border:0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display:block;
 }
 
-.btn.wrong{
-    background-color: rgb(224, 57, 57);
-    color:white
+.correct{
+    background: #4caf50;
+    color: #fff;
 }
-
-.start-btn,.next-btn{
-    font-size:  1.5rem;
-    font-weight: bold;
-    padding: 10px 25px;
+.incorrect{
+    background: #f44336;
+    color: #fff;
 }
-
-.controls{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    
-}
-.hide{
-    display: none;
-}
-     
